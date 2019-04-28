@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="MemScan" />
+		<Option makefile_is_custom="1" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option output="bin/Debug/MemScan" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Debug/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-g" />
+					<Add directory="include" />
+					<Add directory="include/Modules/MemoryProtect/MemoryMap" />
+					<Add directory="include/Toolkit" />
+					<Add directory="include/Modules/GlobalViolation" />
+				</Compiler>
+			</Target>
+			<Target title="Release">
+				<Option output="bin/Release/MemScan" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-O2" />
+					<Add directory="include" />
+					<Add directory="include/Modules/MemoryProtect/MemoryMap" />
+					<Add directory="include/Toolkit" />
+					<Add directory="include/Modules/GlobalViolation" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+			<Add option="-fexceptions" />
+		</Compiler>
+		<Unit filename="include/Alternative/Alternative.h" />
+		<Unit filename="include/Alternative/AlternativeTable.h" />
+		<Unit filename="include/Decision.h" />
+		<Unit filename="include/ModuleBase.h" />
+		<Unit filename="include/Modules/GlobalViolation/GlobalViolation.h" />
+		<Unit filename="include/Modules/MemoryProtect/AllocationEntry.h" />
+		<Unit filename="include/Modules/MemoryProtect/MemoryMap/MemoryMap.h" />
+		<Unit filename="include/Modules/MemoryProtect/MemoryMap/WindowsMemoryMap.h" />
+		<Unit filename="include/Modules/MemoryProtect/MemoryProtect.h" />
+		<Unit filename="include/StateMachine.h" />
+		<Unit filename="include/Toolkit/SHA256.h" />
+		<Unit filename="include/ViolationTable.h" />
+		<Unit filename="include/Workers/SecurityWorker.h" />
+		<Unit filename="include/Workers/StateMachineWorker.h" />
+		<Unit filename="include/Workers/Worker.h" />
+		<Unit filename="src/Decision.cpp" />
+		<Unit filename="src/ModuleBase.cpp" />
+		<Unit filename="src/Modules/GlobalViolation/GlobalViolation.cpp" />
+		<Unit filename="src/Modules/MemoryProtect/MemoryMap/MemoryMap.cpp" />
+		<Unit filename="src/Modules/MemoryProtect/MemoryMap/WindowsMemoryMap.cpp" />
+		<Unit filename="src/Modules/MemoryProtect/MemoryProtect.cpp" />
+		<Unit filename="src/StateMachine.cpp" />
+		<Unit filename="src/Toolkit/SHA256.cpp" />
+		<Unit filename="src/ViolationTable.cpp" />
+		<Unit filename="src/Workers/SecurityWorker.cpp" />
+		<Unit filename="src/Workers/StateMachineWorker.cpp" />
+		<Unit filename="src/Workers/Worker.cpp" />
+		<Extensions>
+			<code_completion />
+			<envvars />
+			<debugger />
+			<lib_finder disable_auto="1" />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>
